@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{%block title%}{{title}}{%endblock%}
+{% block page_content %}
+<body>
+    <div class="container">
+        <h1>Объявления</h1>
+         <a  href="/advert-create">Добавить объявление</a>
+        {%for advert in adverts%}
+        <div class="alert alert-info">
+            <h4>{{advert.title}}</h4>
+            <a>{{advert.text}}</a><br>
+            <p>Дата публикации:{{advert.date.date()}}</p>
+            <a  href="/advert-edit/{{advert.id}}" >Редактировать</a>
+            <a  href="/advert-delete/{{advert.id}}" >Удалить</a>
+        </div>
+        {%endfor%}
+    </div>
+</body>
+{%endblock%}

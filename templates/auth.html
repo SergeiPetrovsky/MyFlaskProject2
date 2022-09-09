@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{%block title%}{{title}}{%endblock%}
+{% block page_content %}
+<style>
+input[name="password"] {
+  -webkit-text-security: disc !important;
+}
+</style>
+
+<body>
+    <div class="container">
+        <h1>Введите пароль</h1>
+        <form method="post">
+            <input type="text" autocomplete="off" name="password" id="password" class="form-control" value="Введите пароль"
+                      placeholder="Введите пароль"><br>
+
+            <input type="submit" class="w-100 btn btn-lg btn-outline-primary" value="Подтвердить">
+
+        </form>
+    </div>
+</body>
+{%endblock%}

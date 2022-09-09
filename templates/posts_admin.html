@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{%block title%}{{title}}{%endblock%}
+{% block page_content %}
+<body>
+    <div class="container">
+        <h1>Статьи</h1>
+        <a  href="/post-create">Добавить статью</a>
+        {%for article in articles%}
+        <div class="alert alert-info">
+            <h4>{{article.title}}</h4>
+            <a>{{article.intro}}</a><br>
+            <p>Дата публикации:{{article.date.date()}}</p>
+            <a  href="/post-detail/{{article.id}}" >Читать полностью</a>
+             <a  href="/post-edit/{{article.id}}" >Редактировать</a>
+            <a  href="/post-delete/{{article.id}}" >Удалить</a>
+        </div>
+        {%endfor%}
+    </div>
+</body>
+{%endblock%}

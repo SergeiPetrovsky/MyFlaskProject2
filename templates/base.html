@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title%}{%endblock%}</title>
+
+</head>
+
+<link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+
+<body background="https://www.firestock.ru/download/s/1ip8b3qqixgy9no/Fotolia_46795878_Subscription_XXL.jpg">
+
+<div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+    <span style="margin-left : 20px" class="fs-4">Логотип КЛУБА</span>
+    <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+    <a class="me-3 py-2 text-dark text-decoration-none" href="/home">Главная</a>
+
+    <a class="me-3 py-2 text-dark text-decoration-none" href="/posts">Статьи</a>
+    <a class="me-3 py-2 text-dark text-decoration-none" href="/photo">Фотографии</a>
+    <a class="me-3 py-2 text-dark text-decoration-none" href="/advert">Объявления</a>
+    <a class="me-3 py-2 text-dark text-decoration-none" href="/calendar">Календарь событий</a>
+    <a class="me-3 py-2 text-dark text-decoration-none" href="/about">О нас</a>
+    </nav>
+</div>
+
+    {%block page_content%} {% endblock %}
+
+<footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row">
+      <div class="col-12 col-md">
+        <img class="mb-2" src="https://static.tildacdn.com/tild3666-3763-4632-b239-633437306163/overone.png" alt="" width="30" height="30">
+        <small class="d-block mb-3 text-muted">© 2022–2025</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Редактировать</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="/posts-admin">Статьи</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="/photo-admin">Фотографии</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="/advert-admin">Объявления</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Календарь событий</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Другое</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another resource</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>О клубе</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="/documents">Документы</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="/contacts">Контакты</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

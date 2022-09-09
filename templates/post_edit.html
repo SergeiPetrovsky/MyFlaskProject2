@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{%block title%}Редактирование статьи{%endblock%}
+{% block page_content %}
+<style>
+input[name="password"] {
+  -webkit-text-security: disc !important;
+}
+</style>
+<body>
+    <div class="container">
+        <h1>Редактирование статьи</h1>
+        <form method="post">
+
+            <h4>Для редактирование статьи введите пароль</h4>
+            <input type="text" autocomplete="off" name="password" id="password" class="form-control" value="Введите пароль"
+                      placeholder="Введите пароль"><br><br>
+
+            <input type="text" name="title" id="title" class="form-control" value="{{article.title}}"
+                      placeholder="Название статьи"><br>
+            <textarea name="intro" id="intro" class="form-control"
+                      placeholder="Анонс статьи">{{article.intro}}</textarea><br>
+            <textarea name="text" id="text" class="form-control"
+                      placeholder="Основной текст">{{article.text}}</textarea><br>
+            <input type="submit" class="w-100 btn btn-lg btn-outline-primary" value="Сохранить">
+
+        </form>
+    </div>
+</body>
+{%endblock%}

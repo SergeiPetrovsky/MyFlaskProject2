@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{%block title%}{{title}}{%endblock%}
+{% block page_content %}
+<body>
+    <div class="container">
+        <h1>Объявления</h1>
+        {%for advert in adverts%}
+        <div class="alert alert-info">
+            <h4>{{advert.title}}</h4>
+            <a>{{advert.text}}</a><br>
+            <p>Дата публикации:{{advert.date.date()}}</p>
+
+        </div>
+        {%endfor%}
+    </div>
+</body>
+{%endblock%}
